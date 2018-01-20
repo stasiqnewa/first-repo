@@ -1,0 +1,33 @@
+using System;  
+namespace ConsoleApp3  
+{  
+    class Program  
+    {  
+        static void Main(string[] args)  
+        {  
+            string beginning = Console.ReadLine();  
+            string ending = Console.ReadLine();  
+            int expectedCombination = int.Parse(Console.ReadLine());  
+            int br = 0;  
+            for (int i = 1000; i <= 9999; i++)  
+            {  
+                int first = (i / 1000) % 100;  
+                int second = (i / 100) % 10;  
+                int third = (i / 10) % 10;  
+                int fourth = (i % 10);  
+                int sum = first + second + third + fourth;  
+                double product = first * third - expectedCombination;  
+                if (sum == product)  
+                {  
+                    Console.WriteLine(beginning + i + ending+" ");  
+                    br++;  
+                    if (br == expectedCombination)  
+                    {  
+                        break;  
+                    }  
+                      
+                }  
+            }  
+        }  
+    }  
+}
