@@ -24,7 +24,7 @@ namespace ConsoleApp3
                     if (br == expectedCombination)  
                     {  
                         break;  
-                        mrkhjyaw[et
+                      
                     }  
                       
                 }  
